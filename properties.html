@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+                font-family: 'Montserrat',sans-serif;
+                background-color: #f8f9fa;
+        }
+        .hero-section{
+            background: linear-gradient(rgba(0,0,0,0.5) rgba(0,0,0,0.5)),
+            url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg'width='1200' height='600' viewbox='0 0 1200 600'%3E%3Crect width='1200'height='600'fill='%23234e52'/%3E%3Cpath d='M0 400 L50 370 L100 390 L150 350 L200 380 L250 340 L300 360 L350 320 L400 350 L450 330 L500 370 L550 340 L600 380 L650 350 L700 390 L750 340 L800 370 L850 330 L900 360 L950 320 L1000 350 L1050 330 L1100 340 L1200 370 L1200 600 L0 600 Z' fill='%23154e4a'/%3E%3Cpath d='M0 450 L50 430 L100 450 L150420 L200 440 L250 410 L300 450 L350 420 L400 440 L450 410 L500 430 L550 400 L600 44O L650 410 L700 450 L750 420 L800 440 L850 400 L900 430 L950 410 L1000 400 L1050 400 L1100 430 L1150 410 L1200 440 L1200 600 L0 600 L0 600 Z'fill='%230d3331'/%3E%3C/svg%3E ")
+        center/cover no-repeat;
+        }
+        .property-card:hover{
+            transform: translate(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .property-image{
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="h-10 w-10 text-emarald-700"xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24"fill="current colour">
+                    <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-
+                    8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"/>
+                   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091 086v6.198c0 1.035-.84 1.875-1.875
+                   1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-75.75V21a.75.75 0
+                   01-.75.75H5.625a1.875 0 01-1.875-1.875v-6.198c.03-.028.061-.056.091-.086L12 5.43z"/>
+                </svg>
+                <span class="ml-2 text-2xl font-bold text-emarald-700">BARSTA</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="  text-gray hover:text-emarald-700 font-medium">Home</a>
+                <a href="properties.html" class=" text-gray hover:text-emarald-700 font-medium">Properties</a>
+                <a href="about.html" class="text-gray hover:text-emarald-700 font-medium">About Us</a>
+                <a href="contact.html" class=" text-gray hover:text-emarald-700 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle"class="text-gray-700 focus:outline-none">
+                    <svg class="h-6 w-6"fill="none"stroke="currentcolor"viewbox="0 0 24 24" xmlns=https://www.w3.org/2000/svg">
+                      <path stroke-linecap="round"stroke-linejoin="round"stroke-width="2" d="M4"6h16M4 12h16M4 18h16></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu"class="hidden md:hidden bg-white px-4 py-2 shadow-md">
+              <a href="index.html"class="block py-2 text-gray-700 hover:text-emerald-700 font-medium">Home</a>
+              <a href="properties.html"class="block py-2 text-gray-700 hover:text-emerald-700 font-medium">Properties</a>
+              <a href="about.html"class="block py-2 text-gray-700 hover:text-emerald-700 font-medium">About Us</a>
+              <a href="contact.html"class="block py-2 text-gray-700 hover:text-emerald-700 font-medium">Contact</a>
+           </div>
+        </div>
+    </nav>
+
+</body>
+</html>
