@@ -200,20 +200,18 @@
                 <div class="grid grid-cols-1 md:grid=cols-4 gap-4">
                     <div class="col-span-1 md:col-span-2">
                         <select id="location"class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-600">
-                           <option value="">Location</option>
-                           <option value="urban">Urban</option>
-                           <option value="suburban">Suburban</option>
-                           <option value="rural">Rural</option>
-                           <option value="coastal">Coastal</option>
+                           <option value="">Koma</option>
+                           <option value="urban">Muthwani</option>
+                           <option value="suburban">Matuu</option>
                         </select>
                     </div>
                     <div>
                         <select id="price"class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-600">
                             <option value="">Price Range</option>
-                            <option value="0-50000">$0-$50,000</option>
-                            <option value="50000-100000">$50,000-$100,000</option>
-                            <option value="100000-250000">$100,000-$250,000</option>
-                            <option value="250000+">$250,000+</option>
+                            <option value="0-50000">0-50,000</option>
+                            <option value="50000-100000">50,000-100,000</option>
+                            <option value="100000-250000">100,000-250,000</option>
+                            <option value="250000+">250,000+</option>
                         </select>
                     </div>
                     <div>
@@ -263,7 +261,7 @@
                          PRICE:395000,
                          Cash:360000,
                          Deposit:130000,
-                         Balance:"Wiithin 10 Months",
+                         Balance:"Within 10 Months",
                          Price:450000,
                          CASH:0,
                          Payment:"Monthly 250000",
@@ -747,6 +745,63 @@
 </body>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+
+    //search button functionality
+    const searchBtn = document.querySelector('.hero-section button');
+    const locationSelect = document.getElementById('location');
+    const priceSelect = document.getElementById('price');
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function() {
+            filterProperties();
+        });
+    }
+
+    function filterProperties() {
+        const selectedLocation = locationSelect.value;
+        const selectedPrice = priceSelect.value;
+
+        filteredLand = landProperties.filter(property => {
+            const locationMatch = !selectedLocation || 
+                (selectedLocation === 'matuu' && property.location.toLowerCase().includes('matuu')) ||
+                (selectedLocation === 'muthwani' && property.location.toLowerCase().includes('muthwani')) ||
+                (selectedLocation === 'koma' && property.location.toLowerCase().includes('koma')) ||
+                (selectedLocation && property.location.toLowerCase().includes(selectedLocation));
+            
+            let priceMatch = true;
+            if (selectedPrice) {
+                switch(selectedPrice) {
+                    case 0-50000:
+                        priceMatch = property.price <= 50000;
+                        break;
+                    case 50000-100000:
+                        priceMatch = property.price > 50000 && property.price <= 100000;
+                        break;
+                    case 100000-250000:
+                        priceMatch = property.price > 100000 && property.price <= 250000;
+                        break;
+                    case '250000+':
+                        priceMatch = property.price > 250000;
+                        break;
+                }
+            }
+            
+            return locationMatch && priceMatch;
+        });
+        
+        renderLandProperties(filteredLand);
+        
+        document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    
+    
+    function filterLandProperties() {
+        // This can be merged with the filterProperties function if you want
+        // to combine both the button filters and the category filters
+    }
+    
+
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
