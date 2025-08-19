@@ -200,7 +200,8 @@
                 <div class="grid grid-cols-1 md:grid=cols-4 gap-4">
                     <div class="col-span-1 md:col-span-2">
                         <select id="location"class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-600">
-                           <option value="">Koma</option>
+                           <option value="">Location</option>
+                            <option value="">Koma</option>
                            <option value="urban">Muthwani</option>
                            <option value="suburban">Matuu</option>
                         </select>
@@ -259,38 +260,28 @@
                          features: ["Water", "Electricity Available", "Paved Road Access"],
                          description: "Beautiful flat land with mountain view,perfect for buiding your dream home.",
                          PRICE:395000,
-                         Cash:360000,
-                         Deposit:130000,
+                         Deposit:80000,
                          Balance:"Within 10 Months",
-                         Price:450000,
-                         CASH:0,
-                         Payment:"Monthly 250000",
-                         Period:"18 Months"
                      },
                      {
                          id: 2,
                          title: "KANGUNDO ROAD",
                          type: "agricultural",
-                         price: 420000,
+                         price: 750000,
                          acreage: "50*100",
                          location: "KOMA",
-                         images: ["images/images 2.jpeg"],
+                         images: ["images/sell.jpg"],
                          features: ["Fertile Soil", ],
                          description: "Productive farmland with excellent soil quality and existing irrigation infrastructure. Perfect for crop production or livestock.",
                          PRICE:750000,
-                         Cash:650000,
                          Deposit:150000,
-                         Balance:"Wiithin 10 Months",
-                         Price:810000,
-                         CASH:0,
-                         Payment:"Monthly 450000",
-                         Period:"18 Months"
+                         Balance:"Within 10 Months",
                      },
                      {
                          id: 3,
                          title: "LUKENYA",
                          type: "recreational",
-                         price: 175000,
+                         price: 480000,
                          acreage: "50*100",
                          location: "MUTHWANI",
                          
@@ -298,13 +289,22 @@
                          features: ["Mountain Views",],
                          description: "Secluded mountain property with stunning views and natural creek. Perfect for hunting, camping, or building a mountain retreat.",
                          PRICE:480000,
-                         Cash:420000,
-                         Deposit:130000,
-                         Balance:"Wiithin 10 Months",
-                         Price:450000,
-                         CASH:0,
-                         Payment:"Monthly 300000",
-                         Period:"18 Months"
+                         Deposit:80000,
+                         Balance:"Within 10 Months",
+                     },
+                     {
+                         id: 4,
+                         title: "KANGUNDO ROAD",
+                         type: "agricultural",
+                         price: 600000,
+                         acreage: "50*100",
+                         location: "KOMA",
+                         images: ["images/sold.jpg"],
+                         features: ["Fertile Soil", ],
+                         description: "Certified organic farmland with irrigation system. Perfect for sustainable agriculture.",
+                         PRICE:600000,
+                         Deposit:100000,
+                         Balance:"Within 10 Months",
                      },
                    
                  ];
@@ -466,10 +466,7 @@
                                                  <span class="text-gray-600">Price:</span>
                                                  <span class="font-medium">${property.PRICE}</span>
                                              </div>
-                                             <div class="flex justify-between">
-                                                 <span class="text-gray-600">Cash:</span>
-                                                 <span class="font-medium">${property.Cash}</span>
-                                             </div>
+                                             
                                              <div class="flex justify-between">
                                                  <span class="text-gray-600">Deposit:</span>
                                                  <span class="font-medium capitalize">${property.Deposit}</span>
@@ -478,23 +475,7 @@
                                                  <span class="text-gray-600">Balance:</span>
                                                  <span class="font-medium capitalize">${property.Balance}</span>
                                              </div>
-                                             <br>
-                                             <div class="flex justify-between">
-                                                 <span class="text-gray-600">Price:</span>
-                                                 <span class="font-medium">${property.Price}</span>
-                                             </div>
-                                             <div class="flex justify-between">
-                                                 <span class="text-gray-600">Cash:</span>
-                                                 <span class="font-medium">${property.CASH}</span>
-                                             </div>
-                                             <div class="flex justify-between">
-                                                 <span class="text-gray-600">Payment:</span>
-                                                 <span class="font-medium">${property.Payment}</span>
-                                             </div>
-                                             <div class="flex justify-between">
-                                                 <span class="text-gray-600">Period:</span>
-                                                 <span class="font-medium capitalize">${property.Period}</span>
-                                             </div>
+                                            
                                          </div>
                                      </div>
                                  </div>
